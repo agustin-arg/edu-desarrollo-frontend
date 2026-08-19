@@ -8,15 +8,17 @@ function crearUsuario() {
   // {{nombre}} debe ser el nombre definido en cada instancia
   // Devuelve la clase
   // Tu código:
-  function Usuario(opciones) {
+  class Usuario {
+    constructor(opciones) {
     this.nombre = opciones.nombre;
     this.usuario = opciones.usuario;
     this.email = opciones.email;
     this.password = opciones.password;
+    }
+  saludar () {
+    return `Hola, mi nombre es ${this.nombre}`; 
   }
-  Usuario.prototype.saludar = function () {
-    return `Hola, mi nombre es ${this.nombre}`;
-  };
+  }
   return Usuario;
 }
 
